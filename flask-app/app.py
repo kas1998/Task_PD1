@@ -16,11 +16,11 @@ def run_docker(container_name):
 @app.route('/')
 def home():
     results = {
-        "Python": run_docker("imagen-python"),
-        "JavaScript": run_docker("imagen-javascript"),
-        "Java": run_docker("imagen-java"),
-        "Ruby": run_docker("imagen-ruby"),
-        "Go": run_docker("imagen-go")
+        "Python": run_docker("kas19/content_task:apppython"),
+        "JavaScript": run_docker("kas19/content_task:appjavascript"),
+        "Java": run_docker("kas19/content_task:appjava"),
+        "Ruby": run_docker("kas19/content_task:appruby"),
+        "Go": run_docker("kas19/content_task:appgo")
     }
     return render_template('index.html', results=results)
 
